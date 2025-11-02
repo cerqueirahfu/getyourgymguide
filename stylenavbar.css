@@ -1,0 +1,47 @@
+.navbar-link {
+    font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
+    font-size: 14px; /* Adjust size to match the image */
+    text-transform: uppercase; /* All caps */
+    font-weight: 400; /* Regular or light weight */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Pushes content to the edges */
+    align-items: center;
+    padding: 15px 50px; /* Adjust padding as needed */
+    border-bottom: 1px solid #eee; /* The subtle separator line below the nav */
+    /* Add a semi-transparent or light background if needed */
+}
+
+.site-title {
+    font-size: 0.7; 
+    font-weight: 600; /* Bolder */
+    /* Gradient or colored text is tricky in CSS, but you can approximate it: */
+    color: #4b6cb7; /* A solid blue close to the left side of the gradient */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #666; /* Light gray for the regular links */
+    font-family: 'Poppins', sans-serif; /* Use your chosen font */
+    font-size: 0.85em;
+    text-transform: uppercase;
+    margin-left: 25px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4b6cb7; /* Highlight color on hover */
+}
+
+/* Styling the gradient "SIGN UP" button */
+.signup-button {
+    color: white !important; /* Force white text */
+    padding: 8px 15px;
+    border-radius: 5px;
+    /* This creates the blue-to-green gradient background */
+    background-image: linear-gradient(to right, #2596be, #49b483); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}

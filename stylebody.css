@@ -1,0 +1,112 @@
+/* --- Testimonials Section --- */
+.testimonials-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials-grid {
+    display: flex;
+    justify-content: center; /* Center the two cards */
+    gap: 30px; /* Space between the cards */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Soft shadow */
+    width: 45%; /* Allows two cards to fit nicely with a gap */
+    text-align: left;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: flex-start; /* Align icon and text at the top */
+    margin-bottom: 20px;
+}
+
+.reviewer-icon {
+    /* The dark circle/avatar */
+    background-color: #384f7b; 
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.8em;
+    margin-right: 15px;
+    flex-shrink: 0; /* Prevents the icon from shrinking */
+}
+
+.reviewer-quote {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.reviewer-name {
+    font-weight: bold;
+    color: #384f7b; /* Dark blue color */
+    font-size: 0.9em;
+    margin-top: 10px;
+    padding-left: 55px; /* Offset the name under the quote/text */
+}
+
+/* --- Newsletter Section --- */
+.newsletter-section {
+    background-color: #f8faff; /* Light blue/gray background */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.newsletter-description {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.subscribe-form input[type="email"] {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex-grow: 1; /* Input takes up available space */
+    font-size: 1em;
+}
+
+.subscribe-button {
+    /* Gradient Button */
+    background-image: linear-gradient(to right, #4b6cb7 0%, #7c99d8 100%);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.subscribe-button:hover {
+    opacity: 0.9;
+}
+
+/* --- Footer --- */
+.site-footer {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.8em;
+    color: #999;
+    border-top: 1px solid #eee;
+}
