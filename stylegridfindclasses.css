@@ -1,0 +1,89 @@
+.grid2-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5em;
+  padding: 2em;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+}
+
+.box-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.box-content h3 {
+  font-size: 1.1em;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.box-content p {
+  font-size: 0.9em;
+  color: #555;
+  margin: 10px 0;
+}
+
+.location {
+  color: #5b8def;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.book-btn {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.book-btn:hover {
+  background-color: #5b8def;
+  color: white;
+  border-color: #5b8def;
+}
+
+/* Tablet = 2 columns but tighter spacing */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .grid2-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+  }
+}
+
+/* Mobile = 1 column */
+@media (max-width: 767px) {
+  .grid2-container {
+    grid-template-columns: 1fr;
+  }
+
+  .box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .box-img {
+    margin-bottom: 15px;
+  }
+}
+

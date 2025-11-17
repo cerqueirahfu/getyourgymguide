@@ -1,0 +1,31 @@
+.search-bar{
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    border-radius: 28px;
+    background: #f6f6f6;
+}
+
+.search-input{
+    font-size: 16px;
+    margin-left: 14px;
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 600px;
+    
+}
+
+form {
+    display: flex; /* Makes it a flex container */
+    justify-content: center; /* Centers the search-bar horizontally */
+    width: 100%; /* Ensures it spans full width to allow centering */
+    padding-top: 50px; /* Example: pushes it down from the navbar */
+}
+
+
+.search-section-background {
+    background-color: #f8faff; /* Example lilac/purple color */
+    padding: 50px 0; /* Add vertical spacing like in the image */
+}

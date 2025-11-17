@@ -1,0 +1,112 @@
+/* 1. New: Wrapper for full width sections like the banner and footer */
+.full-width-wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Main Grid Container: Only for content that should be centered and constrained */
+.grid-container {
+    /* The max-width and margin auto ensure the main content is centered */
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 0 1rem; /* Add padding to prevent content touching the sides */
+
+    /* Enables CSS Grid layout for the main container */
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile default */
+    gap: 2rem 3rem; /* Add consistent vertical and horizontal gap */
+
+    /* Define rows and name the areas for easy placement */
+    grid-template-areas:
+        "navbar"
+        "classes-box"
+        "explanation-box"
+        "blog-box"
+        "testimonials-section"
+        "newsletter-section"
+        "site-footer";
+}
+
+/* The fitness-banner needs to be outside the .grid-container in the HTML to span full width, 
+   but for the current HTML structure, we will treat it as a full-width element. 
+   If the banner MUST be edge-to-edge, it's better placed *outside* the grid-container, 
+   but since it's already inside, let's adjust its style. */
+
+/* Temporary fix for the banner width, assuming it's still inside the .grid-container */
+.fitness-banner {
+    grid-area: fitness-banner;
+    /* Overwrite padding/margin constraints to stretch it across the container's width */
+    width: 100vw; /* Take full viewport width */
+    margin-left: calc(50% - 50vw); /* Center it by offsetting the left margin */
+    padding: 4rem 1rem; /* Add internal padding */
+    background-size: cover; /* Ensure background image covers the area */
+    text-align: center;
+}
+
+/* Assign major elements to their named grid areas */
+.navbar { grid-area: navbar; }
+.classes-box { grid-area: classes-box; }
+.explanation-box { grid-area: explanation-box; }
+.blog-box { grid-area: blog-box; }
+.testimonials-section { grid-area: testimonials-section; }
+.newsletter-section { grid-area: newsletter-section; }
+.site-footer { grid-area: site-footer; }
+
+/* Nested Grid/Flex for the Classes and Explanation Sections */
+.classes-content,
+.explanation-image {
+    display: flex;
+    flex-direction: column; /* Stacked vertically on mobile */
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+/* Ensure the image in these sections fits */
+.classes-content .classes-banner,
+.explanation-image .howitworks-banner {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 300px; 
+}
+
+
+/* --- */
+
+/* 🖥️ Layout adjustments for larger screens (Desktop/Tablet) */
+@media (min-width: 768px) {
+    /* Redefine the grid areas to fix potential overlaps and create two columns */
+    .grid-container {
+        /* Define two main columns: one for main content, one for the blog/side-content */
+        grid-template-columns: 2fr 1fr;
+
+        /* Place all single-column sections (navbar, banner, classes, testimonials) to span both columns */
+        grid-template-areas:
+            "navbar navbar"
+            "fitness-banner fitness-banner"
+            "classes-box classes-box"
+            "explanation-box blog-box" /* Puts blog next to the explanation box */
+            "testimonials-section testimonials-section"
+            "newsletter-section newsletter-section"
+            "site-footer site-footer";
+    }
+
+    /* Nested Flex for Classes and Explanation: side-by-side */
+    .classes-content,
+    .explanation-image {
+        flex-direction: row; /* Side-by-side horizontally */
+        align-items: flex-start;
+    }
+
+    /* Set widths for the image and article for a two-column nested layout */
+    .classes-content .classes-banner,
+    .explanation-image .howitworks-banner {
+        width: 40%;
+        min-width: 300px; /* Prevent image from getting too small */
+    }
+
+    .classes-content article,
+    .explanation-image article {
+        width: 60%;
+    }
+}
