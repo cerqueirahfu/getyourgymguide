@@ -1,65 +1,154 @@
 .grid-container{
     display: grid;
     grid-template-columns: 1fr;
-    gap: 4em;
+    gap: 3em;
 }
 
-            .classes-box,
-            .explanation-box,
-            .blog-box {
-                width: 80%;          
-                max-width: 1000px;
-                margin: 50px;
-                padding: 20px 0;
-            }
+.classes-box,
+.explanation-box,
+.blog-box {
+    width: 80%;          
+    max-width: 1000px;
+    margin: 50px;
+    padding: 20px 0;
+}
 
-            .classes-box section, 
-            .explanation-box section,
-            .blog-box section {
-                display: flex;
-                align-items: center; /* Vertically align items in the row */
-                gap: 30px; /* Space between the image and the text */
-                margin-bottom: 50px; /* Add space below the whole section */
-            }
+.classes-box section, 
+.explanation-box section,
+.blog-box section {
+    display: flex;
+    align-items: center; /* Vertically align items in the row */
+    gap: 30px; /* Space between the image and the text */
+    margin-bottom: 50px; /* Add space below the whole section */
+}
 
-            /* Classes Box: Image on Left, Text on Right (Default Flex Order) */
-            .classes-box section,
-            .explanation-box section {
-                flex-direction: row; 
-            }
-
-
-            /* Blog Box: Image on Top, Text Below (Default Block/Column Order) */
-            .blog-box section {
-                /* Set back to column layout for the 'Move. Grow. Thrive.' section */
-                flex-direction: column;
-                align-items: flex-start; /* Align content to the left */
-            }
+/* Classes Box: Image on Left, Text on Right (Default Flex Order) */
+.classes-box section,
+.explanation-box section {
+    flex-direction: row; 
+}
 
 
-            /* 4. Styling the Image and Content Areas */
+/* Blog Box: Image on Top, Text Below (Default Block/Column Order) */
+.blog-box section {
+    /* Set back to column layout for the 'Move. Grow. Thrive.' section */
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+    background-color: #f8faff; /* Light blue/gray background */
+}
 
-            .classes-box img,
-            .explanation-box img {
-                /* Use a fixed width for the image and let it not shrink/grow */
-                width: 350px;
-                height: auto; 
-                border-radius: 5px;
-                flex-shrink: 0; 
-            }
 
-            .classes-box article,
-            .explanation-box article {
-                /* The text content fills the rest of the space */
-                flex-grow: 1; 
-            }
+/* 4. Styling the Image and Content Areas */
 
-           
+.classes-box img,
+.explanation-box img {
+    /* Use a fixed width for the image and let it not shrink/grow */
+    width: 350px;
+    height: auto; 
+    border-radius: 5px;
+    flex-shrink: 0; 
+}
 
-            /* Styling for the large image in the blog section */
-            .blog-box img {
-                width: 500px;
-                height: auto;
-                border-radius: 5px;
-                margin-top: 15px;
-            }
+.classes-box article,
+.explanation-box article {
+    /* The text content fills the rest of the space */
+    flex-grow: 1; 
+}
+
+
+
+/* Styling for the large image in the blog section */
+.blog-box img {
+    width: 500px;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/*OFFER BOX STYLE*/
+
+.offer-box{
+    background-color: #1a1a1a; /* Very Dark Gray/Black */
+    border: 3px solid #00e676; /* Strong Neon Green Border */
+    border-radius: 12px;
+    padding: 2.5rem 2rem; /* Increased padding */
+    text-align: center;
+    
+    /* Stronger, more attractive shadow/glow */
+    box-shadow: 0 0 20px rgba(0, 230, 118, 0.4), 0 4px 15px rgba(0, 0, 0, 0.3);
+    
+    /* Ensure all text inside is bright white by default */
+    color: white; 
+    }
+
+.offer-box .offer-title {
+    /* Bright, contrasting color for energy */
+    color: #00e676; /* Neon Green */
+    font-size: 2.2rem; /* Larger font */
+    font-weight: 900; /* Extra bold */
+    margin-bottom: 0.8rem;
+    text-transform: uppercase; /* Yell the offer */
+    
+    /* Add a subtle glow to the title */
+    text-shadow: 0 0 5px rgba(0, 230, 118, 0.6);
+}
+
+.offer-box .offer-text {
+    font-size: 1.3rem; /* Larger text for readability */
+    color: #f0f0f0; /* Off-white for contrast */
+    margin-bottom: 1.5rem;
+}
+
+.offer-box .expiration-info {
+    font-size: 1rem;
+    /* Use a strong red for urgency on the dark background */
+    color: #ff3d00; 
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+.offer-box .offer-cta {
+    /* Powerful, contrasting CTA button */
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 1rem 2rem; /* Larger button */
+    background-color: #ff3d00; /* Strong Orange/Red for action */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+    /* Add hover effect for interaction */
+    transition: background-color 0.3s ease;
+}
+
+.offer-box .offer-cta:hover {
+    background-color: #00e676; /* Hover to Neon Green */
+}
+
+    /*POPUP STYLE*/
+
+   .help-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff3e0;
+    border: 1px solid #ff9800;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+    text-align: center;
+
+    opacity: 0;       /* Hidden */
+    pointer-events: none; /* Prevent clicking when hidden */
+    z-index: 1000;
+
+    transition: opacity 0.5s ease;
+}
+
+.help-popup.visible {
+    opacity: 1;       /* Fade in */
+    pointer-events: auto;
+}

@@ -12,6 +12,8 @@
         <link rel="stylesheet" href="stylebuttons.css">
         <link rel="stylesheet" href="stylebody.css">
         <link rel="stylesheet" href="stylegridblog.css">
+        <link rel="stylesheet" href="stylebanner.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
 
     </head>
     <body>
@@ -23,25 +25,37 @@
                     <a href="index.html">Home</a>
                     <a href="findclasses.html">Find Classes</a>
                     <a href="forum.html">Forum</a>
-                    <a href="blog.html">Blog</a>
+                    <a href="blog.html" class="active">Blog</a>
                     <a href="about.html">About</a>
                     <a href="faq.html">FAQ</a>
                     <a href="signup.html" class="signup-button">Sign Up</a>
+                    <a href="listyourgym.html" class="signup-button">List your gym</a>
                 </ul>
             </nav>
         </header>
+
+        
+        <div class="stayactive-banner">
+            <div class="banner-content">
+                <h1>Stay Inspired</h1>
+                <p>
+                    Explore some articles and learn about the benefits of been active. 
+                </p>
+            </div>
+        </div>
+        
 
         <div class="search-blog-bar">
             <form>
                 <div class="search-bar">
                     <span class="material-symbols-outlined">search</span>
-                    <input class="search-input" type="search" placeholder="Search for classes, gyms, trainers...">
+                    <input class="search-input" type="search" placeholder="Search for interesting blogs">
                 </div>
             </form>
         </div>
 
         <div class="blog-card">
-            <img src="your-image.jpg" alt="">
+            <img src="photos/streches-blog.jpg" alt="">
             
             <div class="blog-content">
                 <h2>5 Essential Stretches Every Beginner Should Know</h2>
@@ -50,6 +64,43 @@
             </div>
         </div>
 
+        <div class="blog-card">
+            <img src="photos/pilates-benefits.jpg" alt="">
+            <div class="blog-content">
+                <h2>10 Benefits of Pilates for a Stronger Body</h2>
+                <p>Pilates helps improve posture, core strength, and flexibility. Discover why it's loved by beginners and pros alike...</p>
+                <span class="date">September 2025</span>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <img src="photos/running-shoes.jpg" alt="">
+            <div class="blog-content">
+                <h2>How to Choose the Perfect Running Shoes</h2>
+                <p>Your shoes can make or break your performance. Learn how to pick the right pair for your feet and goals...</p>
+                <span class="date">August 2025</span>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <img src="photos/yoga-beginners.jpg" alt="">
+            <div class="blog-content">
+                <h2>Yoga for Beginners: Top 7 Poses to Get Started</h2>
+                <p>New to yoga? These beginner-friendly poses will help you build balance, relaxation, and flexibility...</p>
+                <span class="date">July 2025</span>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <img src="photos/healthy-meals.jpg" alt="">
+            <div class="blog-content">
+                <h2>Easy Healthy Meals for Busy People</h2>
+                <p>No time to cook? Here are simple meal ideas that are nutritious, quick, and perfect for active lifestyles...</p>
+                <span class="date">June 2025</span>
+            </div>
+        </div>
+
+
 
 
     <footer class="site-footer">
@@ -57,6 +108,8 @@
             &copy; 2025 Get Your Gym Guide. All rights reserved.
         </p>
     </footer>
+
+    <script src="jsfiles/blogsearchinput.js" defer></script>
 
     </body>
 </html>

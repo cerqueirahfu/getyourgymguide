@@ -1,0 +1,394 @@
+/* ------------------------------ */
+/* GLOBAL UPGRADES – FEEL MORE PREMIUM */
+/* ------------------------------ */
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #f7f7f7;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Strong headline style */
+h2, h3 {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #111;
+}
+
+/* Section spacing */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #111;
+    text-align: center;
+}
+
+/* ------------------------------ */
+/* HERO SLIDER IMPROVEMENT */
+/* ------------------------------ */
+
+.slider {
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.fitness-banner{
+    background-image: url('photos/background_walpapper.jpg');
+}
+
+.gymowner-banner {
+    background-image: url('photos/bannergymowner.jpg');
+}
+
+.getfit-banner {
+    background-image: url('photos/getfit.jpg');
+}
+
+/* More powerful banner look */
+.fitness-banner,
+.gymowner-banner, .getfit-banner {
+    
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+    position: relative;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+/* Dark overlay for readability */
+.fitness-banner::before,
+.gymowner-banner::before,
+.getfit-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* The core gradient effect (blue-purple to green) */
+    background: linear-gradient(
+        to right, 
+        rgba(0, 51, 153, 0.7), /* Darker Blue/Purple with Opacity */
+        rgba(102, 204, 0, 0.4) /* Green with Opacity */
+    );
+    
+    /* Keep the gradient below the text content */
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 5;
+    max-width: 600px;
+    color: white;
+    pointer-events: none;
+}
+
+.banner-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Slider dots upgrade */
+.slider-dots {
+    text-align: center;
+    margin: 1rem 0 2rem;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 6px;
+    background-color: #aaa;
+    border-radius: 50%;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.dot.active {
+    background-color:  rgba(102, 204, 0, 0.4);
+    transform: scale(1.3);
+}
+
+/* ------------------------------ */
+/* GRID SECTIONS – MORE ENERGY */
+/* ------------------------------ */
+
+.grid-container > div,
+.grid-container > section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.grid-container > div:hover,
+.grid-container > section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.10);
+}
+
+/* ------------------------------ */
+/* CLASS CARDS DESIGN */
+/* ------------------------------ */
+
+.explanation-box{
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 5rem 4rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.explanation-image {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 1.5rem;
+    align-items: flex-start;
+    
+}
+
+
+.explanation-image img {
+    border-radius: 10px;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+/* --- Newsletter Section --- */
+.newsletter-section {
+    background-color: #f8faff; /* Light blue/gray background */
+    padding: 50px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.newsletter-description {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* Newsletter input */
+.subscribe-form input {
+    width: 300px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* ------------------------------ */
+/* TESTIMONIALS */
+/* ------------------------------ */
+
+.testimonials-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials-grid {
+    display: flex;
+    justify-content: center; /* Center the two cards */
+    gap: 30px; /* Space between the cards */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Soft shadow */
+    width: 45%; /* Allows two cards to fit nicely with a gap */
+    text-align: left;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: flex-start; /* Align icon and text at the top */
+    margin-bottom: 20px;
+}
+
+.reviewer-icon {
+    /* The dark circle/avatar */
+    background-color: #384f7b; 
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.8em;
+    margin-right: 15px;
+    flex-shrink: 0; /* Prevents the icon from shrinking */
+}
+
+.reviewer-quote {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.reviewer-name {
+    font-weight: bold;
+    color: #384f7b; /* Dark blue color */
+    font-size: 0.9em;
+    margin-top: 10px;
+    padding-left: 55px; /* Offset the name under the quote/text */
+}
+
+
+/* ------------------------------ */
+/* FOOTER */
+/* ------------------------------ */
+
+.site-footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* ------------------------------ */
+/* BLOG CONTAINER */
+/* ------------------------------ */
+
+/* MAIN CONTAINER */
+.blog-box {
+    padding: 2rem 0;
+    background-color: #f8faff; /* Light blue/gray background */
+}
+
+.blog-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+/* LEFT IMAGE */
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    max-height: 550px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* RIGHT CONTENT */
+.blog-content-modern h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.blog-intro {
+    max-width: 100%;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* FEATURES GRID */
+.blog-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 2rem;
+    margin: 2rem 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.feature-circle {
+    width: 55px;
+    height: 55px;
+    border: 2px solid  rgba(102, 204, 0, 0.4);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    color:  rgba(102, 204, 0, 0.4);
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.feature-item h4 {
+    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* CTA BUTTON */
+.blog-cta {
+    background: linear-gradient(90deg, #2596be, #49b483); /* blue to green gradient */
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: 0.3s;
+}
+
+.blog-cta:hover {
+    opacity: 0.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .blog-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .blog-features {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .feature-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

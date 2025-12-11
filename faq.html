@@ -26,8 +26,9 @@
                 <a href="forum.html">Forum</a>
                 <a href="blog.html">Blog</a>
                 <a href="about.html">About</a>
-                <a href="faq.html">FAQ</a>
+                <a href="faq.html" class="active">FAQ</a>
                 <a href="signup.html" class="signup-button">Sign Up</a>
+                <a href="listyourgym.html" class="signup-button">List your gym</a>
             </ul>
         </nav>
     </header>
@@ -38,12 +39,60 @@
         <details class="faq-item">
             <summary class="faq-question">How do I book a class?</summary>
             <p class="faq-answer">
-                You can book a class by visiting our Classes page, choosing your preferred session, 
-                and clicking the “Book Now” button. You will receive a confirmation email 
+                You can book a class by visiting our Classes page, choosing your preferred session,
+                and clicking the “Book Now” button. You will receive a confirmation email
                 immediately after completing your booking.
             </p>
         </details>
 
+        <details class="faq-item">
+            <summary class="faq-question">Can I cancel or reschedule my booking?</summary>
+            <p class="faq-answer">
+                Yes, you can. Cancellations and reschedules must be made at least 12 hours before the scheduled class time to receive a full credit or refund. Please log into your account to manage your bookings, or contact us directly for assistance.
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">Do I need to pay for each class separately?</summary>
+            <p class="faq-answer">
+                It depends on your package. We offer both single-class passes and various membership options (monthly or yearly) that allow you to attend multiple classes for one recurring fee. You can view all our pricing options on the Pricing page.
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">What if I'm new to fitness?</summary>
+            <p class="faq-answer">
+                Our studio is welcoming to all levels! We offer beginner-friendly classes clearly marked on the schedule. Our instructors are trained to provide modifications and support, ensuring a safe and comfortable experience for everyone, regardless of their fitness background.
+            </p>
+        </details>
+
+    </div>
+
+    <h2 class="contact">Still need help? Contact us!</h2>
+
+    <div class="container">
+        <form action="action_page.php">
+
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="topic">What is your question about?</label>
+            <select id="topic" name="topic">
+            <option value="nulloption">Select an option.</option>
+            <option value="account">I have problems acessing my account.</option>
+            <option value="booking">I have problems cancelling my booking.</option>
+            <option value="otherquestion">I have other question related.</option>
+            </select>
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+
+        </form>
     </div>
 
 

@@ -4,6 +4,71 @@
     background-size: cover;
     background-position: center;
     
+    min-height: 800px;
+    
+    /* Use flexbox to center the content */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    
+    /* Required for the gradient overlay to work with position: absolute */
+    position: relative; 
+    
+    /* Optional: Sets the text color for the content inside */
+    color: white; 
+    text-align: center;
+}
+
+.gymowner-banner {
+    /* Set the background image and ensure it covers the area */
+    background-image: url('photos/bannergymowner.jpg'); /* Replace with the actual image path */
+    background-size: cover;
+    background-position: center;
+    
+    
+    min-height: 800px;
+    
+    /* Use flexbox to center the content */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    
+    /* Required for the gradient overlay to work with position: absolute */
+    position:relative; 
+    
+    /* Optional: Sets the text color for the content inside */
+    color: white; 
+    text-align: center;
+}
+
+.stayactive-banner {
+    /* Set the background image and ensure it covers the area */
+    background-image: url('photos/stayinspired.jpg'); /* Replace with the actual image path */
+    background-size: cover;
+    background-position: center;
+    
+    /* Set a minimum height for the banner */
+    min-height: 400px; /* Adjust as needed */
+    
+    /* Use flexbox to center the content */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    
+    /* Required for the gradient overlay to work with position: absolute */
+    position: relative; 
+    
+    /* Optional: Sets the text color for the content inside */
+    color: white; 
+    text-align: center;
+}
+
+.ourstory-banner {
+    /* Set the background image and ensure it covers the area */
+    background-image: url('photos/ourstory-banner.jpg'); /* Replace with the actual image path */
+    background-size: cover;
+    background-position: center;
+    
     /* Set a minimum height for the banner */
     min-height: 400px; /* Adjust as needed */
     
@@ -40,6 +105,46 @@
     z-index: 1; 
 }
 
+.gymowner-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* The core gradient effect (blue-purple to green) */
+    background: linear-gradient(
+        to right, 
+        rgba(53, 53, 54, 0.7), /* Darker Blue/Purple with Opacity */
+        rgba(91, 92, 91, 0.4) /* Green with Opacity */
+    );
+    
+    /* Keep the gradient below the text content */
+    z-index: 1; 
+}
+
+
+
+.ourstory-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* The core gradient effect (blue-purple to green) */
+    background: linear-gradient(
+        to right, 
+        rgba(0, 51, 153, 0.7), /* Darker Blue/Purple with Opacity */
+        rgba(102, 204, 0, 0.4) /* Green with Opacity */
+    );
+    
+    /* Keep the gradient below the text content */
+    z-index: 1; 
+}
+
 /* Ensure the text is on top of the gradient overlay */
 .banner-content {
     /* Push content to the front */
@@ -52,12 +157,67 @@
 
 .banner-content h1 {
     font-size: 2.5em; /* Adjust font size */
-    margin-bottom: 0.5em;
+    margin-bottom: 6.5em;
     font-weight: bold; /* Looks like a medium-bold font */
 }
 
 .banner-content p {
     font-size: 1.1em; /* Adjust font size */
-    line-height: 1.5;
+    line-height: 5.5;
     font-weight: 300; /* Looks like a lighter font weight */
 }
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 400px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fitness-banner,
+.gymowner-banner, .stayactive-banner, .ourstory-banner {
+    position: relative;
+    height: 100%; /* NEW */
+    width: 100%;  /* NEW */
+}
+
+
+
+.slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Dots container */
+.slider-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Each dot */
+.slider-dots .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Active dot */
+.slider-dots .dot.active {
+    background-color: #333;  /* Highlight */
+}
+

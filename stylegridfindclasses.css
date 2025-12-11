@@ -1,67 +1,90 @@
+/* === GRID WRAPPER === */
 .grid2-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2.5em;
-  padding: 2em;
+    display: grid;
+    gap: 2.5rem;
+    padding: 20px;
+
+    /* Responsive columns */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
+/* === CARD BOX === */
 .box {
-  display: flex;
-  align-items: center;
-  background-color: #f5f5f5;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Hover effect like Airbnb */
 .box:hover {
-  transform: translateY(-5px);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.14);
 }
 
+/* === IMAGE === */
 .box-img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 20px;
+    width: 100%;
+    height: 220px;          /* uniform height */
+    object-fit: cover;      /* always crops beautifully */
 }
 
+/* === CONTENT === */
+.box-content {
+    padding: 20px;
+    flex: 1;                /* push button to bottom */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Title */
 .box-content h3 {
-  font-size: 1.1em;
-  margin: 0;
-  color: #1a1a1a;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
+/* Description */
 .box-content p {
-  font-size: 0.9em;
-  color: #555;
-  margin: 10px 0;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    flex-grow: 1; /* pushes price + button down */
 }
 
+/* Location link */
 .location {
-  color: #5b8def;
-  font-weight: 500;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 10px;
+    font-weight: bold;
+    color: #0077cc;
+    text-decoration: none;
+    margin-bottom: 8px;
 }
 
+/* Price styling */
+.price {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* === BOOK NOW BUTTON === */
 .book-btn {
-  background-color: white;
-  border: 1px solid #ddd;
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.2s;
+    background: linear-gradient(90deg, #2596be, #49b483); /* blue to green gradient */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 9px 18px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    cursor: pointer;
+    font-weight: bold;
+    transition: opacity 0.15s;
 }
 
-.book-btn:hover {
-  background-color: #5b8def;
-  color: white;
-  border-color: #5b8def;
-}
+.book-btn:hover { background-color: #5b8def; color: white; border-color: #5b8def; }
+
 
 /* Tablet = 2 columns but tighter spacing */
 @media (min-width: 768px) and (max-width: 1024px) {

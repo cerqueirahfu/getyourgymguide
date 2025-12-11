@@ -1,0 +1,82 @@
+/* MAIN CONTAINER */
+.classes-box {
+    text-align: center;
+    background-color: #f8faff; /* Light blue/gray background */
+}
+
+/* SLIDER CONTAINER */
+.classes-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 16px;
+}
+
+/* SLIDES */
+.class-slide {
+    display: none;
+    animation: fade 0.8s ease;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding-bottom: 2rem;
+}
+
+.class-slide.active {
+    display: block;
+}
+
+/* IMAGE SIZE — BIG AND BEAUTIFUL */
+.class-slide img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+}
+
+/* TEXT AREA */
+.class-info {
+    padding: 1.5rem 2rem;
+    text-align: left;
+}
+
+.class-info h3 {
+    font-size: 1.7rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.class-info p {
+    margin-bottom: 1rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* DOT NAVIGATION */
+.classes-dots {
+    margin-top: 1rem;
+}
+
+.classes-dot {
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.classes-dot.active {
+    background: #ff6b3d;
+    transform: scale(1.25);
+}
+
+/* ANIMATION */
+@keyframes fade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -35,6 +35,11 @@
     color: #4b6cb7; /* Highlight color on hover */
 }
 
+.nav-links a.active {
+    color: #4b6cb7; /* Green color for the active page link */
+    font-weight: 600; /* Slightly bolder for emphasis */
+}   
+
 /* Styling the gradient "SIGN UP" button */
 .signup-button {
     color: white !important; /* Force white text */

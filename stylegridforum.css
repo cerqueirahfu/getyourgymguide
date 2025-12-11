@@ -30,7 +30,8 @@
 
 .start-discussion-btn {
     width: 100%;
-    margin-top: 1em;
+    margin-top: 3em;
+    margin-bottom: 3em;
     background: #6c63ff;
     color: white;
     border: none;
@@ -144,7 +145,7 @@
 .read-more-btn {
     align-self: flex-start;
     padding: 8px 16px;
-    background: white;
+    background: linear-gradient(90deg, #2596be, #49b483); /* blue to green gradient */
     border: 1px solid #ccc;
     border-radius: 8px;
     font-weight: bold;

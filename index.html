@@ -8,146 +8,274 @@
         <meta name="keywords" content="Fitness, Gym">
         <meta name="description" content="Find and book the best gyms, studios, and wellness experiences in your city.">
         <title>Get Your Gym Guide</title>
-        <link rel="stylesheet" href="stylebanner.css">
+        <!--link rel="stylesheet" href="stylebanner.css"-->
         <link rel="stylesheet" href="stylenavbar.css">
         <link rel="stylesheet" href="stylebuttons.css">
-        <link rel="stylesheet" href="stylebody.css">
-        <link rel="stylesheet" href="stylegridindex.css">
+        <!--link rel="stylesheet" href="stylebody.css"-->
+        <!-- link rel="stylesheet" href="stylegridindex.css"-->
+        <!--link rel="stylesheet" href="style.css"-->
+        <link rel="stylesheet" href="styleindex.css">
+        <link rel="stylesheet" href="stylelatestclasses.css">
         
     </head>
     <body>
     
-    <div class="grid-container">
         
     <header class="navbar">
         <div class="site-title" ><h1>Get your Gym Guide</h1></div>
         
         <nav class="nav-links">
             <ul>
-                <a href="index.html">Home</a>
+                <a href="index.html" class="active">Home</a>
                 <a href="findclasses.html">Find Classes</a>
                 <a href="forum.html">Forum</a>
                 <a href="blog.html">Blog</a>
                 <a href="about.html">About</a>
                 <a href="faq.html">FAQ</a>
                 <a href="signup.html" class="signup-button">Sign Up</a>
+                <a href="listyourgym.html" class="signup-button">List your gym</a>
             </ul>
         </nav>
     </header>
 
-    <div class="fitness-banner">
-        <div class="banner-content">
-            <h1>Discover Your Perfect Fitness Journey</h1>
-            <p>
-                Find and book the best gyms, studios, and wellness experiences in your city. 
-                Join thousands of members transforming their lives through fitness.
-            </p>
+    <div class="slider">
+        <div class="slide active">
+            <div class="fitness-banner">
+                <a href="findclasses.html" class="banner-overlay"></a>
+                    <div class="banner-content">
+                        <h1>Discover Your Perfect Fitness Journey</h1>
+                        <p>
+                            Find and book the best gyms, studios, and wellness experiences in your city. 
+                        </p>
+                    </div>
+                
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="gymowner-banner">
+                <a href="findclasses.html" class="banner-overlay"></a>
+                <div class="banner-content">
+                    <h1>Are you a Gym Owner?</h1>
+                    <p>
+                        List your gym and grow your community.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+         <div class="slide offer-box">
+            <div class="getfit-banner">
+                <div class="banner-content">
+                    <h2 class="offer-title">
+                        <i class="fas fa-dumbbell"></i> GET FIT. SAVE BIG!
+                    </h2>
+                    <p class="offer-text">
+                        Book your gym or class through us and **get a 10% discount** on your first month!
+                    </p>
+                    <div class="expiration-info">
+                        This offer expires on: <span id="offer-expiry-date"></span>
+                    </div>
+                    <a href="signup.html" class="button offer-cta">Claim Your Discount Now</a>
+                </div>
+            </div>
         </div>
     </div>
 
+
+    <div class="slider-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+       
+    
     <div class="classes-box">
         <h2 class="section-title">Latest Classes</h2>
-        <section class="classes-content">
-            <img class="classes-banner" src="photos/bannertwo.jpg" alt="Picture of mother and kid doing yoga" height="200">
-            <article>
-                <h3>Yoga for mom's and kids</h3>
-                <p>
-            Discover our new yoga classes designed especially for moms and kids. 
-            Strengthen your body, relax your mind, and enjoy quality time together 
-            through gentle movements and mindful breathing. 
-            Build connection, balance, and calm—one stretch at a time.
-                </p>
-                <button>View all classes</button>
-            </article>
-        </section>
+
+        <div class="classes-slider">
+
+            <!-- Slide 1 -->
+            <div class="class-slide active">
+                <img src="photos/bannertwo.jpg" alt="Yoga for moms and kids">
+                <div class="class-info">
+                    <h3>Yoga for Mom's and Kids</h3>
+                    <p>
+                        Discover our new yoga classes designed especially for moms and kids. 
+                        Strengthen your body, relax your mind, and enjoy quality time together 
+                        through gentle movements and mindful breathing.
+                    </p>
+                    <a href="findclasses.html"><button>View all classes</button></a>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="class-slide">
+                <img src="photos/yoga1.jpg" alt="Two women doing yoga">
+                <div class="class-info">
+                    <h3>Morning Yoga Flow</h3>
+                    <p>
+                        Start your day with energizing yoga sequences suitable for all levels. 
+                        Located in the heart of downtown with flexible morning schedules.
+                    </p>
+                    <a href="findclasses.html"><button>View all classes</button></a>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="class-slide">
+                <img src="photos/hiit.jpg" alt="Two women doing yoga">
+                <div class="class-info">
+                    <h3>HIIT Bootcamp</h3>
+                    <p>
+                        High-intensity interval training designed to push your limits. 
+                        Perfect for those seeking maximum results in minimum time.
+                    </p>
+                    <a href="findclasses.html"><button>View all classes</button></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="classes-dots">
+            <span class="classes-dot active"></span>
+            <span class="classes-dot"></span>
+            <span class="classes-dot"></span>
+        </div>
     </div>
 
-    
-    <div class="explanation-box">
-        <h2 class="section-title">How it works?</h2>
 
-        <section class="explanation-image">
-            <img class="howitworks-banner" src="photos/banner-how-it-works.jpg" alt="Yoga group Picture" height="200">
-            <article>
-            <p>
-                Find your next workout, yoga flow, or wellness escape all in one place. 
-                Explore hundreds of gyms, studios, and classes around you, compare experiences, 
-                and read honest reviews from people who’ve been there. No more endless searching
-                just discover, book, and feel amazing.
-            </p>
-            </article>
-            <button>Learn more</button>
-        </section>
+    
+        <div class="explanation-box">
+            <h2 class="section-title">How it works?</h2>
+
+            <section class="explanation-image">
+                <img class="howitworks-banner" src="photos/banner-how-it-works.jpg" alt="Yoga group Picture" height="200">
+                <article>
+                <p>
+                    Find your next workout, yoga flow, or wellness escape all in one place. 
+                    Explore hundreds of gyms, studios, and classes around you, compare experiences, 
+                    and read honest reviews from people who’ve been there. No more endless searching
+                    just discover, book, and feel amazing.
+                </p>
+                <a href="about.html"><button>Learn more</button></a>
+                </article>
+            </section>
+                
             
-        
-     </div>
+        </div>
             
       
    
-    <div class="blog-box">
-        <section>
-            <h2>Move. Grow. Thrive.</h2>
-            <img src="photos/bannerthree.jpg" alt="Banner Pilates" height="300">
-            <article>
-                <h3>Discover the 10 benefits of Pilates</h3>
-            </article>
-            <button>Read more</button>
-        </section>
-    </div>
+        <div class="blog-box">
+            <h2 class="section-title">Move. Grow. Thrive.</h2>
+            <div class="blog-wrapper">
 
-    <section class="testimonials-section">
-        <h2>What people are saying about us</h2>
-        
-        <div class="testimonials-grid">
-            
-            <div class="testimonial-card">
-                <div class="reviewer-info">
-                    <div class="reviewer-icon">MJ</div> 
-                    <p class="reviewer-quote">
-                        "I was looking for classes for me and my 7 years old kid and surprisingly found it here.
-                        The website is amazing! Save your time on looking in many pages to find your best fit"
-                    </p>
+                <!-- LEFT SIDE IMAGE -->
+                <div class="blog-image">
+                    <img src="photos/bannerthree.jpg" alt="Pilates Class">
                 </div>
-                <p class="reviewer-name">Manuela Jackson</p>
-            </div>
 
-            <div class="testimonial-card">
-                <div class="reviewer-info">
-                    <div class="reviewer-icon">JC</div>
-                    <p class="reviewer-quote">
-                        "I found a really nice cross fit classes through this platform based on reviews.
-                        And it is very close to me! I really like the idea to find anything we want in one place."
+                <!-- RIGHT SIDE CONTENT -->
+                <div class="blog-content-modern">
+                    <h2>Discover the 10 benefits of Pilates</h2>
+                    <p class="blog-intro">
+                        Pilates has become one of the most popular fitness practices worldwide and for good reason. 
+                        In this post, we explore 10 proven benefits of Pilates, from enhanced mobility and reduced stress to better balance and improved body awareness. 
+                        If you’re looking for a low-impact, highly effective way to feel stronger, healthier, and more aligned, Pilates might be exactly what you need.
                     </p>
+
+                    <!-- FEATURES GRID -->
+                    <div class="blog-features">
+                        <div class="feature-item">
+                            <div class="feature-circle">1</div>
+                            <h4>Improves Core Strength</h4>
+                            <p>Targets deep abdominal and back muscles, creating a strong foundation for all movement.</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-circle">2</div>
+                            <h4>Enhances Flexibility & Mobility</h4>
+                            <p>Lengthens and stretches muscles, increasing range of motion and reducing stiffness.</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-circle">3</div>
+                            <h4>Boosts Posture & Alignment</h4>
+                            <p>Corrects imbalances and strengthens muscles that support your spine, easing aches.</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-circle">4</div>
+                            <h4>Increases Body Awareness</h4>
+                            <p>Develops a deeper connection between your mind and body for better control and coordination.</p>
+                        </div>
+                    </div>
+
+                    <a href="blog.html"><button class="blog-cta">Read more</button></a>
                 </div>
-                <p class="reviewer-name">Jhon Carl</p>
             </div>
-            
         </div>
-    </section>
 
 
+        <section class="testimonials-section">
+            <h2>What people are saying about us</h2>
+            
+            <div class="testimonials-grid">
+                
+                <div class="testimonial-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-icon">MJ</div> 
+                        <p class="reviewer-quote">
+                            "I was looking for classes for me and my 7 years old kid and surprisingly found it here.
+                            The website is amazing! Save your time on looking in many pages to find your best fit"
+                        </p>
+                    </div>
+                    <p class="reviewer-name">Manuela Jackson</p>
+                </div>
 
-        <section class="newsletter-section">
-            <h2>Subscribe to our newsletter</h2>
-            <p class="newsletter-description">
-                Get exclusive offers and new fitness experiences every week.
-            </p>
-            <div class="subscribe-form">
-                <input type="email" placeholder="Enter your email address" name="email">
-                <button>
-                    Subscribe
-                </button>
+                <div class="testimonial-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-icon">JC</div>
+                        <p class="reviewer-quote">
+                            "I found a really nice cross fit classes through this platform based on reviews.
+                            And it is very close to me! I really like the idea to find anything we want in one place."
+                        </p>
+                    </div>
+                    <p class="reviewer-name">Jhon Carl</p>
+                </div>
+                
             </div>
         </section>
 
+
+
+            <section class="newsletter-section">
+                <h2>Subscribe to our newsletter</h2>
+                <p class="newsletter-description">
+                    Get exclusive offers and new fitness experiences every week.
+                </p>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="Enter your email address" name="email">
+                    <button>
+                        Subscribe
+                    </button>
+                </div>
+            </section>
+
         
 
-        <footer class="site-footer">
-            <p>
-                &copy; 2025 Get Your Gym Guide. All rights reserved.
-            </p>
-        </footer>
+            <footer class="site-footer">
+                <p>
+                    &copy; 2025 Get Your Gym Guide. All rights reserved.
+                </p>
+            </footer>
     
     </div>
+
+    <script src="jsfiles/slidingbanners.js" defer></script>
+    <script src="jsfiles/offer-date.js" defer></script>
+    <script src="jsfiles/slidingbannerlatestclasses.js" defer></script>
+    
     </body> 
 </html>

@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
         <link rel="stylesheet" href="stylesearchbar.css">
         <link rel="stylesheet" href="stylegridfindclasses.css">
+        <link rel="stylesheet" href="stylefilterbar.css">
 
     </head>
     <body>
@@ -24,12 +25,13 @@
             <nav class="nav-links">
                 <ul>
                     <a href="index.html">Home</a>
-                    <a href="findclasses.html">Find Classes</a>
+                    <a href="findclasses.html" class="active">Find Classes</a>
                     <a href="forum.html">Forum</a>
                     <a href="blog.html">Blog</a>
                     <a href="about.html">About</a>
                     <a href="faq.html">FAQ</a>
                     <a href="signup.html" class="signup-button">Sign Up</a>
+                    <a href="listyourgym.html" class="signup-button">List your gym</a>
                 </ul>
             </nav>
         </header>
@@ -41,53 +43,274 @@
                     </div>
                 </form>
             </div>
+
+        <div class="filter-bar">
+            <div class="filter-group">
+                <label for="category-select">Category</label>
+                <select id="category-select" name="category">
+                    <option value="all">All Categories</option>
+                    <option value="aquatics">Aquatics & Swimming</option>
+                    <option value="cardio">Cardio & Aerobics</option>
+                    <option value="crossfit">Cross Fit</option>
+                    <option value="cycling">Cycling & Spin Classes</option>
+                    <option value="dance">Dance & Zumba</option>
+                    <option value="functional">Functional & Mobility Training</option>
+                    <option value="gymnastics">Gymnastics & Aerial</option>
+                    <option value="hiit">HIIT & Circuit Training</option>
+                    <option value="martial-arts">Martial Arts & Boxing</option>
+                    <option value="personal-training">Personal Training</option>
+                    <option value="sports">Team Sports (e.g., Basketball, Volleyball)</option>
+                    <option value="strength">Strength Training & Weightlifting</option>
+                    <option value="yoga">Yoga & Pilates</option>
+                    </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="location-select">Location</label>
+                <select id="location-select" name="location">
+                    <option value="all">All Areas</option>
+                    <option value="aachen">Aachen</option>
+                    <option value="augsburg">Augsburg</option>
+                    <option value="bielefeld">Bielefeld</option>
+                    <option value="bonn">Bonn</option>
+                    <option value="braunschweig">Braunschweig</option>
+                    <option value="bremen">Bremen</option>
+                    <option value="bremerhaven">Bremerhaven</option>
+                    <option value="chemnitz">Chemnitz</option>
+                    <option value="darmstadt">Darmstadt</option>
+                    <option value="dortmund">Dortmund</option>
+                    <option value="dresden">Dresden</option>
+                    <option value="duisburg">Duisburg</option>
+                    <option value="duesseldorf">Düsseldorf</option>
+                    <option value="erfurt">Erfurt</option>
+                    <option value="essen">Essen</option>
+                    <option value="frankfurt">Frankfurt am Main</option>
+                    <option value="freiburg">Freiburg im Breisgau</option>
+                    <option value="furtwangen">Furtwangen</option>
+                    <option value="gelsenkirchen">Gelsenkirchen</option>
+                    <option value="goettingen">Göttingen</option>
+                    <option value="guetersloh">Gütersloh</option>
+                    <option value="hagen">Hagen</option>
+                    <option value="halle">Halle (Saale)</option>
+                    <option value="hamburg">Hamburg</option>
+                    <option value="hannover">Hannover</option>
+                    <option value="heidelberg">Heidelberg</option>
+                    <option value="heilbronn">Heilbronn</option>
+                    <option value="herne">Herne</option>
+                    <option value="hildesheim">Hildesheim</option>
+                    <option value="ingolstadt">Ingolstadt</option>
+                    <option value="jena">Jena</option>
+                    <option value="karlsruhe">Kalsruhe</option>
+                    <option value="kaiserslautern">Kaiserslautern</option>
+                    <option value="kassel">Kassel</option>
+                    <option value="kiel">Kiel</option>
+                    <option value="koblenz">Koblenz</option>
+                    <option value="koeln">Köln (Cologne)</option>
+                    <option value="krefeld">Krefeld</option>
+                    <option value="leipzig">Leipzig</option>
+                    <option value="luebeck">Lübeck</option>
+                    <option value="ludwigsburg">Ludwigsburg</option>
+                    <option value="ludwigshafen">Ludwigshafen am Rhein</option>
+                    <option value="magdeburg">Magdeburg</option>
+                    <option value="mannheim">Mannheim</option>
+                    <option value="moers">Moers</option>
+                    <option value="moenchengladbach">Mönchengladbach</option>
+                    <option value="muelheim">Mülheim an der Ruhr</option>
+                    <option value="muenchen">München (Munich)</option>
+                    <option value="muenster">Münster</option>
+                    <option value="nuernberg">Nürnberg (Nuremberg)</option>
+                    <option value="oberhausen">Oberhausen</option>
+                    <option value="offenbach">Offenbach am Main</option>
+                    <option value="oldenburg">Oldenburg</option>
+                    <option value="osnabrueck">Osnabrück</option>
+                    <option value="paderborn">Paderborn</option>
+                    <option value="potsdam">Potsdam</option>
+                    <option value="recklinghausen">Recklinghausen</option>
+                    <option value="regensburg">Regensburg</option>
+                    <option value="remscheid">Remscheid</option>
+                    <option value="rostock">Rostock</option>
+                    <option value="saarbruecken">Saarbrücken</option>
+                    <option value="salzgitter">Salzgitter</option>
+                    <option value="siegen">Siegen</option>
+                    <option value="solingen">Solingen</option>
+                    <option value="stuttgart">Stuttgart</option>
+                    <option value="trier">Trier</option>
+                    <option value="tuebingen">Tübingen</option>
+                    <option value="ulm">Ulm</option>
+                    <option value="wiesbaden">Wiesbaden</option>
+                    <option value="wolfsburg">Wolfsburg</option>
+                    <option value="wuppertal">Wuppertal</option>
+                    <option value="wuerzburg">Würzburg</option>
+                    <option value="zwickau">Zwickau</option>
+                    </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="price-select">Price Range</label>
+                <select id="price-select" name="price-range">
+                    <option value="any">Any Price</option>
+                    <option value="free">Free / Trial</option>
+                    <option value="low">€0 - €25 / Month (Budget)</option>
+                    <option value="medium">€25 - €50 / Month (Standard)</option>
+                    <option value="high">€50 - €100 / Month (Mid-Range)</option>
+                    <option value="premium">€100+ / Month (Premium)</option>
+                    <option value="custom">Custom / Pay-as-you-go</option>
+                    </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="time-select">Time</label>
+                <select id="time-select" name="time">
+                    <option value="any">Anytime</option>
+                    <option value="morning">Morning</option>
+                    <option value="afternoon">Afternoon</option>
+                    <option value="evening">Evening</option>
+                    </select>
+            </div>
+        </div>
+
+
         <div class="grid2-container">
-            <div class="box">
+            <div class="box"  data-category="yoga" data-location="heidelberg" data-price-tier="low" data-time="morning">
                 <img src="photos/yoga1.jpg" alt="Morning Yoga" class="box-img">
                 <div class="box-content">
                     <h3>Morning Yoga Flow - Downtown Studio</h3>
                     <p>Start your day with energizing yoga sequences suitable for all levels. Located in the heart of downtown with flexible morning schedules.</p>
-                    <a href="#" class="location">Downtown Yoga Center - €15</a>
-                    <button class="book-btn">BOOK NOW</button>
+                    <a href="#" class="location">Heidelberg</a>
+                    <p class="price">Price: €15</p>
+                    <a href="signup.html" class="book-btn">BOOK NOW</a>
                 </div>
             </div>
 
-            <div class="box">
+            <div class="box" data-category="hiit" data-location="oldenburg" data-price-tier="medium" data-time="afternoon">
                 <img src="photos/hiit.jpg" alt="HIIT Bootcamp" class="box-img">
                 <div class="box-content">
                     <h3>HIIT Bootcamp - Power Fitness Gym</h3>
                     <p>High-intensity interval training designed to push your limits. Perfect for those seeking maximum results in minimum time.</p>
-                    <a href="#" class="location">Power Fitness Center - €20</a>
-                    <button class="book-btn">BOOK NOW</button>
+                    <a href="#" class="location">Oldenburg</a>
+                    <p class="price">Price: €20</p>
+                    <a href="signup.html" class="book-btn">BOOK NOW</a>
                 </div>
             </div>
 
-            <div class="box">
+            <div class="box"  data-category="yoga" data-location="freiburg" data-price-tier="low" data-time="evening">
                 <img src="photos/yoga2.jpg" alt="Sunset Meditation" class="box-img">
                 <div class="box-content">
                     <h3>Sunset Meditation & Stretch</h3>
                     <p>Wind down your evening with guided meditation and gentle stretching exercises. Calm your mind and relax your body.</p>
-                    <a href="#" class="location">Zen Wellness Studio - €12</a>
-                    <button class="book-btn">BOOK NOW</button>
+                    <a href="#" class="location">Freiburg im Breisgau</a>
+                    <p class="price">Price: €12</p>
+                    <a href="signup.html" class="book-btn">BOOK NOW</a>
                 </div>
             </div>
 
-            <div class="box">
+            <div class="box" data-category="strength" data-location="frankfurt" data-price-tier="medium" data-time="morning">
                 <img src="photos/strenght.jpg" alt="Strength Training" class="box-img">
                 <div class="box-content">
                     <h3>Strength Training Fundamentals</h3>
                     <p>Learn proper form and technique for weight training. Build strength safely with expert guidance from certified trainers.</p>
-                    <a href="#" class="location">Iron Peak Gym - €18</a>
-                    <button class="book-btn">BOOK NOW</button>
+                    <a href="#" class="location">Frankfurt am Main</a>
+                    <p class="price">Price: €18</p>
+                    <a href="signup.html" class="book-btn">BOOK NOW</a>
                 </div>
             </div>
+
+            <div class="box" data-category="yoga" data-location="muenchen" data-price-tier="low" data-time="morning">
+                <img src="photos/yoga3.jpeg" alt="Sunrise Yoga" class="box-img">
+                <div class="box-content">
+                    <h3>Sunrise Yoga - Munich Studio</h3>
+                    <p>Start your day with refreshing yoga sequences for all levels. Perfect for morning energy boost.</p>
+                    <a href="#" class="location">München</a>
+                    <p class="price">Price: €15</p>
+                    <a href="signup.html" class="book-btn">BOOK NOW</a>
+                </div>
             </div>
 
-            <footer class="site-footer">
-                <p>
-                    &copy; 2025 Get Your Gym Guide. All rights reserved.
-                </p>
-            </footer>
+            <div class="box" data-category="crossfit" data-location="hamburg" data-price-tier="high" data-time="evening">
+                <img src="photos/crossfit-jpg.webp" alt="Evening CrossFit" class="box-img">
+                <div class="box-content">
+                    <h3>Evening CrossFit - Elite Gym</h3>
+                    <p>Intense CrossFit workouts designed to maximize strength and endurance. Evening sessions for professionals.</p>
+                    <a href="#" class="location">Hamburg</a>
+                    <p class="price">Price: €60</p>
+                    <a href="signup.html" class="book-btn">BOOK NOW</a>
+                </div>
+            </div>
+
+            <div class="box" data-category="dance" data-location="koeln" data-price-tier="medium" data-time="afternoon">
+                <img src="photos/zumba.jpg" alt="Zumba Class" class="box-img">
+                <div class="box-content">
+                    <h3>Zumba & Dance Fitness - Cologne Studio</h3>
+                    <p>Fun and energetic dance workouts for all skill levels. Join our afternoon Zumba sessions!</p>
+                    <a href="#" class="location">Köln</a>
+                    <p class="price">Price: €25</p>
+                    <a href="signup.html" class="book-btn">BOOK NOW</a>
+                </div>
+            </div>
+
+            <div class="box" data-category="strength" data-location="stuttgart" data-price-tier="medium" data-time="morning">
+                <img src="photos/strength2.jpg" alt="Morning Strength Training" class="box-img">
+                <div class="box-content">
+                    <h3>Morning Strength Training - Power Gym</h3>
+                    <p>Build strength safely with guided workouts. Ideal for early risers looking to start strong.</p>
+                    <a href="#" class="location">Stuttgart</a>
+                    <p class="price">Price: €30</p>
+                    <a href="signup.html" class="book-btn">BOOK NOW</a>
+                </div>
+            </div>
+
+            <div class="box" data-category="cycling" data-location="dresden" data-price-tier="premium" data-time="evening">
+                <img src="photos/cycling.jpg" alt="Indoor Cycling" class="box-img">
+                <div class="box-content">
+                    <h3>Evening Indoor Cycling - Spin Studio</h3>
+                    <p>High-energy cycling sessions with professional instructors. Evening classes for maximum burn.</p>
+                    <a href="#" class="location">Dresden</a>
+                    <p class="price">Price: €75</p>
+                    <a href="signup.html" class="book-btn">BOOK NOW</a>
+                </div>
+            </div>
+
+            <div class="box" data-category="martial-arts" data-location="nuernberg" data-price-tier="low" data-time="afternoon">
+                <img src="photos/martialarts.jpg" alt="Martial Arts Training" class="box-img">
+                <div class="box-content">
+                    <h3>Martial Arts & Boxing - Nürnberg Dojo</h3>
+                    <p>Learn self-defense and combat skills. Afternoon sessions suitable for beginners and intermediates.</p>
+                    <a href="#" class="location">Nürnberg</a>
+                    <p class="price">Price: €20</p>
+                    <a href="signup.html" class="book-btn">BOOK NOW</a>
+                </div>
+            </div>
+
+            <div class="box" data-category="personal-training" data-location="frankfurt" data-price-tier="premium" data-time="morning">
+                <img src="photos/personaltraining.jpg" alt="Personal Training" class="box-img">
+                <div class="box-content">
+                    <h3>Personal Training - Frankfurt</h3>
+                    <p>One-on-one sessions with certified trainers. Morning appointments tailored to your goals.</p>
+                    <a href="#" class="location">Frankfurt am Main</a>
+                    <p class="price">Price: €100</p>
+                    <a href="signup.html" class="book-btn">BOOK NOW</a>
+                </div>
+            </div>
+
+            <div class="box" data-category="aquatics" data-location="leipzig" data-price-tier="medium" data-time="afternoon">
+                <img src="photos/swimming.jpeg" alt="Swimming Lessons" class="box-img">
+                <div class="box-content">
+                    <h3>Swimming Lessons - Leipzig Pool</h3>
+                    <p>Learn or improve your swimming techniques. Afternoon classes available for all ages.</p>
+                    <a href="#" class="location">Leipzig</a>
+                    <p class="price">Price: €35</p>
+                    <a href="signup.html" class="book-btn">BOOK NOW</a>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="site-footer">
+            <p>
+                &copy; 2025 Get Your Gym Guide. All rights reserved.
+            </p>
+        </footer>
         
+        <script src="jsfiles/dynamicfilter.js" defer></script>
     </body>
 </html>

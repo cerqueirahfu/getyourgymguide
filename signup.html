@@ -11,9 +11,15 @@
         <link rel="stylesheet" href="stylenavbar.css">
         <link rel="stylesheet" href="stylebuttonsandbody.css">
         <link rel="stylesheet" href="stylebody.css">
+        <link rel="stylesheet" href="stylegridsignup.css">
+        <link rel="stylesheet" href="style.css">
 
     </head>
     <body>
+        <div id="help-popup" class="help-popup">
+            <p>Do you need help? Please, click the link.</p>
+            <a href="about.html" class="popup-link">Go to Contact Form</a>
+        </div>
         <header class="navbar">
         <div class="site-title" ><h1>Get your Gym Guide</h1></div>
         
@@ -26,9 +32,32 @@
                 <a href="about.html">About</a>
                 <a href="faq.html">FAQ</a>
                 <a href="signup.html" class="signup-button">Sign Up</a>
+                <a href="listyourgym.html" class="signup-button">List your gym</a>
             </ul>
         </nav>
     </header>
+
+    <div class="auth-grid-container">
+
+        <div class="auth-card">
+            <h2>Welcome back</h2>
+            <img src="photos/person__lifting_weights.jpg" alt="Person lifting weights"> 
+            <label for="email-login">E-mail address</label>
+            <input type="email" id="email-login" placeholder="Enter your email address">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password">
+            <button class="log-in-button">Log In</button>
+        </div>
+
+        <div class="auth-card">
+            <h2>New to the Community?</h2>
+            <img src="photos/person_doing_crunches.jpg" alt="Person doing crunches">
+            <label for="email-signup">Enter your email</label>
+            <input type="email" id="email-signup" placeholder="Enter your email">
+            <button class="sign-up-button">Sign Up</button>
+        </div>
+
+    </div>
 
     <footer class="site-footer">
         <p>
@@ -36,5 +65,6 @@
         </p>
     </footer>
 
+    <script src="jsfiles/popup-timer.js" defer></script>
     </body>
 </html>

@@ -1,0 +1,93 @@
+/* Base Styling & Centering */
+body {
+    /* Set a light background color for the page */
+    background-color: #f4f4f9; 
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 2rem 1rem; /* Add overall page padding */
+}
+
+/* --- */
+
+/* Grid Container for Cards */
+.auth-grid-container {
+    /* 1. Enable Grid */
+    display: grid; 
+
+    /* 2. Initial Mobile Layout: One column */
+    grid-template-columns: 1fr; 
+
+    /* 3. Spacing */
+    gap: 2rem; 
+    
+    /* 4. Center the entire container on the page */
+    max-width: 1000px; /* Maximum width for the two-column layout */
+    margin: 0 auto;
+}
+
+/* Card Styling */
+.auth-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.auth-card h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Styling for the image within the card */
+.auth-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+/* Input and Button Styling */
+input[type="email"], 
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.log-in-button,
+.sign-up-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    /* Use the gradient colors from your image */
+    background: linear-gradient(to right, #4c77c0, #20a06c);
+    transition: opacity 0.3s;
+}
+
+.log-in-button:hover,
+.sign-up-button:hover {
+    opacity: 0.9;
+}
+
+
+/* --- */
+
+/* 🖥️ Desktop Layout: Two Columns */
+@media (min-width: 768px) {
+    .auth-grid-container {
+        /* Switch to a two-column layout, ensuring both columns are equal width */
+        grid-template-columns: 1fr 1fr;
+    }
+}

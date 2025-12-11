@@ -23,11 +23,12 @@
             <ul>
                 <a href="index.html">Home</a>
                 <a href="findclasses.html">Find Classes</a>
-                <a href="forum.html">Forum</a>
+                <a href="forum.html" class="active">Forum</a>
                 <a href="blog.html">Blog</a>
                 <a href="about.html">About</a>
                 <a href="faq.html">FAQ</a>
                 <a href="signup.html" class="signup-button">Sign Up</a>
+                <a href="listyourgym.html" class="signup-button">List your gym</a>
             </ul>
         </nav>
     </header>
@@ -43,24 +44,23 @@
 
                 <h3 class="filter-title">CATEGORY FILTER</h3>
                 <div class="category-list">
-                    <button class="category-btn">General Chat</button>
-                    <button class="category-btn">Yoga</button>
-                    <button class="category-btn">Fitness</button>
-                    <button class="category-btn">Nutrition</button>
-                </div>
+                    <button class="category-btn" data-filter="all">General Chat</button>
+                    <button class="category-btn" data-filter="yoga">Yoga</button>
+                    <button class="category-btn" data-filter="fitness">Fitness</button>
+                    <button class="category-btn" data-filter="nutrition">Nutrition</button>
+                    <button class="category-btn" data-filter="pilates">Pilates</button>
+                    <button class="category-btn" data-filter="wellness">Wellness</button>
+                    <button class="category-btn" data-filter="running">Running</button>
+                    <button class="category-btn" data-filter="meditation">Meditation</button>
 
-            <h3 class="filter-title">ACTIVE FILTER</h3>
-            <div class="active-filters">
-                <span class="active-pill">Off Topic</span>
-                <span class="active-pill">NYC-GYM</span>
-            </div>
+                </div>
 
         </aside>
 
         <!-- CONTENT -->
         <section class="content">
 
-            <article class="post-card">
+            <article class="post-card" data-category="yoga">
                 <div class="post-header">
                     <div class="avatar"></div>
                     <div class="post-title-block">
@@ -71,13 +71,167 @@
                 </div>
 
             <div class="post-info">
-                <span>Author: Name Firstname Surname</span>
+                <span>Author: Sam Smith</span>
                 <span>• 42 replies</span>
                 <span>• 2k</span>
             </div>
 
                 <button class="read-more-btn">READ MORE</button>
             </article>
+
+            <article class="post-card" data-category="nutrition">
+                <div class="post-header">
+                    <div class="avatar"></div>
+                    <div class="post-title-block">
+                        <h3>Healthy breakfast ideas?</h3>
+                        <p>“Struggling to find meals that keep me full but don't feel heavy…”</p>
+                    </div>
+                    <span class="tag">Nutrition</span>
+                </div>
+                <div class="post-info">
+                    <span>Author: Maria Gomez</span>
+                    <span>• 18 replies</span>
+                    <span>• 1.3k</span>
+                </div>
+                <button class="read-more-btn">READ MORE</button>
+            </article>
+
+            <article class="post-card" data-category="yoga">
+                <div class="post-header">
+                    <div class="avatar"></div>
+                    <div class="post-title-block">
+                        <h3>Best Yoga Mats for Beginners</h3>
+                        <p>“I slip a lot during downward dog—what mats actually have grip?”</p>
+                    </div>
+                    <span class="tag">Yoga</span>
+                </div>
+                <div class="post-info">
+                    <span>Author: Daniel Weber</span>
+                    <span>• 27 replies</span>
+                    <span>• 3.4k</span>
+                </div>
+                <button class="read-more-btn">READ MORE</button>
+            </article>
+
+            <article class="post-card" data-category="fitness">
+                <div class="post-header">
+                    <div class="avatar"></div>
+                    <div class="post-title-block">
+                        <h3>How to Improve Push-Ups?</h3>
+                        <p>“I can barely get past 5 reps—any progression tips?”</p>
+                    </div>
+                    <span class="tag">Fitness</span>
+                </div>
+                <div class="post-info">
+                    <span>Author: Aisha Khan</span>
+                    <span>• 56 replies</span>
+                    <span>• 4.1k</span>
+                </div>
+                <button class="read-more-btn">READ MORE</button>
+            </article>
+
+            <article class="post-card" data-category="pilates">
+                <div class="post-header">
+                    <div class="avatar"></div>
+                    <div class="post-title-block">
+                        <h3>Pilates Reformers Worth It?</h3>
+                        <p>“Thinking about joining a Reformer class but unsure if it’s beginner-friendly…”</p>
+                    </div>
+                    <span class="tag">Pilates</span>
+                </div>
+                <div class="post-info">
+                    <span>Author: Laura Schmidt</span>
+                    <span>• 33 replies</span>
+                    <span>• 2.8k</span>
+                </div>
+                <button class="read-more-btn">READ MORE</button>
+            </article>
+
+            <article class="post-card" data-category="wellness">
+                <div class="post-header">
+                    <div class="avatar"></div>
+                    <div class="post-title-block">
+                        <h3>How to Stay Motivated?</h3>
+                        <p>“I start strong every Monday but lose energy by Thursday…”</p>
+                    </div>
+                    <span class="tag">Wellness</span>
+                </div>
+                <div class="post-info">
+                    <span>Author: Jake Thompson</span>
+                    <span>• 15 replies</span>
+                    <span>• 990</span>
+                </div>
+                <button class="read-more-btn">READ MORE</button>
+            </article>
+
+            <article class="post-card" data-category="running">
+                <div class="post-header">
+                    <div class="avatar"></div>
+                    <div class="post-title-block">
+                        <h3>Training for First 5K</h3>
+                        <p>“Signed up for a charity run—need a beginner timetable…”</p>
+                    </div>
+                    <span class="tag">Running</span>
+                </div>
+                <div class="post-info">
+                    <span>Author: Sophie Müller</span>
+                    <span>• 22 replies</span>
+                    <span>• 1.7k</span>
+                </div>
+                <button class="read-more-btn">READ MORE</button>
+            </article>
+
+            <article class="post-card" data-category="nutrition">
+                <div class="post-header">
+                    <div class="avatar"></div>
+                    <div class="post-title-block">
+                        <h3>Best Supplements for Energy?</h3>
+                        <p>“Feeling drained after work—any natural supplements that work?”</p>
+                    </div>
+                    <span class="tag">Nutrition</span>
+                </div>
+                <div class="post-info">
+                    <span>Author: Oliver Braun</span>
+                    <span>• 40 replies</span>
+                    <span>• 3.1k</span>
+                </div>
+                <button class="read-more-btn">READ MORE</button>
+            </article>
+
+            <article class="post-card" data-category="meditation">
+                <div class="post-header">
+                    <div class="avatar"></div>
+                    <div class="post-title-block">
+                        <h3>Is Meditation Helping You?</h3>
+                        <p>“Tried for a week but my mind keeps wandering—normal?”</p>
+                    </div>
+                    <span class="tag">Meditation</span>
+                </div>
+                <div class="post-info">
+                    <span>Author: Emily Carter</span>
+                    <span>• 61 replies</span>
+                    <span>• 5.2k</span>
+                </div>
+                <button class="read-more-btn">READ MORE</button>
+            </article>
+
+            <article class="post-card" data-category="strength">
+                <div class="post-header">
+                    <div class="avatar"></div>
+                    <div class="post-title-block">
+                        <h3>Home Gym Setup Essentials</h3>
+                        <p>“Trying to build a compact home gym—what’s truly necessary?”</p>
+                    </div>
+                    <span class="tag">Strength</span>
+                </div>
+                <div class="post-info">
+                    <span>Author: Lucas Meyer</span>
+                    <span>• 49 replies</span>
+                    <span>• 4.6k</span>
+                </div>
+                <button class="read-more-btn">READ MORE</button>
+            </article>
+
 
             <!-- Repeat for additional posts... -->
         </section>
@@ -89,6 +243,8 @@
             &copy; 2025 Get Your Gym Guide. All rights reserved.
         </p>
     </footer>
+
+    <script src="jsfiles/categorydynamicfilter.js" defer></script>
 
     </body>
 </html>

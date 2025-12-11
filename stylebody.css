@@ -63,6 +63,7 @@
     background-color: #f8faff; /* Light blue/gray background */
     padding: 50px 20px;
     text-align: center;
+    width: 100%;
 }
 
 .newsletter-description {
