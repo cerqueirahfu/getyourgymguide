@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <meta name="keywords" content="Fitness, Gym">
         <meta name="description" content="Find and book the best gyms, studios, and wellness experiences in your city.">
-        <title>Get Your Gym Guide</title>
+        <title>Find Classes | Get Your Gym Guide</title>
         <link rel="stylesheet" href="stylenavbar.css">
         <link rel="stylesheet" href="stylebuttons.css">
         <link rel="stylesheet" href="stylebody.css">
@@ -26,6 +26,7 @@
                 <ul>
                     <a href="index.html">Home</a>
                     <a href="findclasses.html" class="active">Find Classes</a>
+                    <a href="findgyms.html">Find Gyms</a>
                     <a href="forum.html">Forum</a>
                     <a href="blog.html">Blog</a>
                     <a href="about.html">About</a>
@@ -69,79 +70,18 @@
                 <label for="location-select">Location</label>
                 <select id="location-select" name="location">
                     <option value="all">All Areas</option>
-                    <option value="aachen">Aachen</option>
-                    <option value="augsburg">Augsburg</option>
-                    <option value="bielefeld">Bielefeld</option>
-                    <option value="bonn">Bonn</option>
-                    <option value="braunschweig">Braunschweig</option>
-                    <option value="bremen">Bremen</option>
-                    <option value="bremerhaven">Bremerhaven</option>
-                    <option value="chemnitz">Chemnitz</option>
-                    <option value="darmstadt">Darmstadt</option>
-                    <option value="dortmund">Dortmund</option>
                     <option value="dresden">Dresden</option>
-                    <option value="duisburg">Duisburg</option>
-                    <option value="duesseldorf">Düsseldorf</option>
-                    <option value="erfurt">Erfurt</option>
-                    <option value="essen">Essen</option>
                     <option value="frankfurt">Frankfurt am Main</option>
                     <option value="freiburg">Freiburg im Breisgau</option>
-                    <option value="furtwangen">Furtwangen</option>
-                    <option value="gelsenkirchen">Gelsenkirchen</option>
-                    <option value="goettingen">Göttingen</option>
-                    <option value="guetersloh">Gütersloh</option>
-                    <option value="hagen">Hagen</option>
-                    <option value="halle">Halle (Saale)</option>
                     <option value="hamburg">Hamburg</option>
-                    <option value="hannover">Hannover</option>
                     <option value="heidelberg">Heidelberg</option>
-                    <option value="heilbronn">Heilbronn</option>
-                    <option value="herne">Herne</option>
-                    <option value="hildesheim">Hildesheim</option>
-                    <option value="ingolstadt">Ingolstadt</option>
-                    <option value="jena">Jena</option>
-                    <option value="karlsruhe">Kalsruhe</option>
-                    <option value="kaiserslautern">Kaiserslautern</option>
-                    <option value="kassel">Kassel</option>
-                    <option value="kiel">Kiel</option>
-                    <option value="koblenz">Koblenz</option>
-                    <option value="koeln">Köln (Cologne)</option>
-                    <option value="krefeld">Krefeld</option>
+                    <option value="koeln">Köln</option>
                     <option value="leipzig">Leipzig</option>
-                    <option value="luebeck">Lübeck</option>
-                    <option value="ludwigsburg">Ludwigsburg</option>
-                    <option value="ludwigshafen">Ludwigshafen am Rhein</option>
-                    <option value="magdeburg">Magdeburg</option>
-                    <option value="mannheim">Mannheim</option>
-                    <option value="moers">Moers</option>
-                    <option value="moenchengladbach">Mönchengladbach</option>
-                    <option value="muelheim">Mülheim an der Ruhr</option>
-                    <option value="muenchen">München (Munich)</option>
-                    <option value="muenster">Münster</option>
-                    <option value="nuernberg">Nürnberg (Nuremberg)</option>
-                    <option value="oberhausen">Oberhausen</option>
-                    <option value="offenbach">Offenbach am Main</option>
+                    <option value="muenchen">München</option>
+                    <option value="nuernberg">Nürnberg</option>
                     <option value="oldenburg">Oldenburg</option>
-                    <option value="osnabrueck">Osnabrück</option>
-                    <option value="paderborn">Paderborn</option>
-                    <option value="potsdam">Potsdam</option>
-                    <option value="recklinghausen">Recklinghausen</option>
-                    <option value="regensburg">Regensburg</option>
-                    <option value="remscheid">Remscheid</option>
-                    <option value="rostock">Rostock</option>
-                    <option value="saarbruecken">Saarbrücken</option>
-                    <option value="salzgitter">Salzgitter</option>
-                    <option value="siegen">Siegen</option>
-                    <option value="solingen">Solingen</option>
                     <option value="stuttgart">Stuttgart</option>
-                    <option value="trier">Trier</option>
-                    <option value="tuebingen">Tübingen</option>
-                    <option value="ulm">Ulm</option>
-                    <option value="wiesbaden">Wiesbaden</option>
-                    <option value="wolfsburg">Wolfsburg</option>
-                    <option value="wuppertal">Wuppertal</option>
-                    <option value="wuerzburg">Würzburg</option>
-                    <option value="zwickau">Zwickau</option>
+
                     </select>
             </div>
 
@@ -171,6 +111,18 @@
 
 
         <div class="grid2-container">
+            <div class="box"  data-category="yoga" data-location="heidelberg" data-price-tier="low" data-time="morning">
+                <img src="photos/bannertwo.jpg" alt="Morning Yoga" class="box-img">
+                <div class="box-content">
+                    <h3>Yoga for Mom's and Kids - Downtown Studio</h3>
+                    <p>Discover our new yoga classes designed especially for moms and kids. 
+                        Strengthen your body and have fun with your beloved litlle one.</p>
+                    <a href="#" class="location">Heidelberg</a>
+                    <p class="price">Price: €25</p>
+                    <a href="signup.html" class="book-btn">BOOK NOW</a>
+                </div>
+            </div>
+
             <div class="box"  data-category="yoga" data-location="heidelberg" data-price-tier="low" data-time="morning">
                 <img src="photos/yoga1.jpg" alt="Morning Yoga" class="box-img">
                 <div class="box-content">

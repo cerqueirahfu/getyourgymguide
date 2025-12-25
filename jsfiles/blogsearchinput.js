@@ -11,7 +11,7 @@ function filterArticles(searchTerm) {
             const contentText = contentElement.textContent.toLowerCase();
 
             if (titleText.includes(filter) || contentText.includes(filter)) {
-                card.style.display = 'block';
+                card.style.display = ''; // Empty string preserves CSS display value
             } else {
                 card.style.display = 'none';
             }

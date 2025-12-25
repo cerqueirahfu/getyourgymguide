@@ -1,52 +1,40 @@
-        document.addEventListener('DOMContentLoaded', () => {
-            const filters = document.querySelectorAll('.filter-bar select');
-            const classBoxes = document.querySelectorAll('.box');
+document.addEventListener("DOMContentLoaded", () => {
+    const categorySelect = document.getElementById("category-select");
+    const locationSelect = document.getElementById("location-select");
+    const priceSelect = document.getElementById("price-select");
+    const timeSelect = document.getElementById("time-select");
 
+    const cards = document.querySelectorAll(".box");
 
-            // --- Central Filtering Function ---
-            function filterClasses() {
-                // 1. Get current values from all filters
-                const selectedCategory = document.getElementById('category-select').value;
-                const selectedLocation = document.getElementById('location-select').value;
-                const selectedPrice = document.getElementById('price-select').value;
-                const selectedTime = document.getElementById('time-select').value;
+    function filterClasses() {
+        const category = categorySelect.value;
+        const location = locationSelect.value;
+        const price = priceSelect.value;
+        const time = timeSelect.value;
 
-                // 2. Iterate over each content box
-                classBoxes.forEach(box => {
-                    const boxCategory = box.getAttribute('data-category');
-                    const boxLocation = box.getAttribute('data-location');
-                    const boxPrice = box.getAttribute('data-price-tier');
-                    const boxTime = box.getAttribute('data-time');
+        cards.forEach(card => {
+            const matchCategory =
+                category === "all" || card.dataset.category === category;
 
-                    // 3. Check for matches against ALL active filters
+            const matchLocation =
+                location === "all" || card.dataset.location === location;
 
-                    // Check Category: Match if filter is 'all' or attribute matches
-                    const isCategoryMatch = selectedCategory === 'all' || selectedCategory === boxCategory;
-                    
-                    // Check Location: Match if filter is 'all' or attribute matches
-                    const isLocationMatch = selectedLocation === 'all' || selectedLocation === boxLocation;
+            const matchPrice =
+                price === "any" || card.dataset.priceTier === price;
 
-                    // Check Price: Match if filter is 'any' or attribute matches
-                    const isPriceMatch = selectedPrice === 'any' || selectedPrice === boxPrice;
+            const matchTime =
+                time === "any" || card.dataset.time === time;
 
-                    // Check Time: Match if filter is 'any' or attribute matches
-                    const isTimeMatch = selectedTime === 'any' || selectedTime === boxTime;
-
-                    // 4. Determine final visibility
-                    const shouldShow = isCategoryMatch && isLocationMatch && isPriceMatch && isTimeMatch;
-
-                    // 5. Apply visibility using the 'hidden' class
-                    if (shouldShow) {
-                        box.classList.remove('hidden');
-                    } else {
-                        box.classList.add('hidden');
-                    }
-                });
+            if (matchCategory && matchLocation && matchPrice && matchTime) {
+                card.classList.remove("hidden");
+            } else {
+                card.classList.add("hidden");
             }
-
-            // 6. Attach the filter function to all select elements' 'change' event
-            filters.forEach(select => {
-                select.addEventListener('change', filterClasses);
-            });
-
         });
+    }
+
+    categorySelect.addEventListener("change", filterClasses);
+    locationSelect.addEventListener("change", filterClasses);
+    priceSelect.addEventListener("change", filterClasses);
+    timeSelect.addEventListener("change", filterClasses);
+});

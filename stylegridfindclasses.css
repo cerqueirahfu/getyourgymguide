@@ -3,9 +3,10 @@
     display: grid;
     gap: 2.5rem;
     padding: 20px;
+    align-items: start;
 
     /* Responsive columns */
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 }
 
 /* === CARD BOX === */
@@ -35,7 +36,6 @@
 /* === CONTENT === */
 .box-content {
     padding: 20px;
-    flex: 1;                /* push button to bottom */
     display: flex;
     flex-direction: column;
 }

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find gyms and fitness studios across Germany. Compare prices, amenities, and locations.">
+    <title>Find Gyms | Get Your Gym Guide</title>
+
+    <link rel="stylesheet" href="stylenavbar.css">
+    <link rel="stylesheet" href="stylebody.css">
+    <link rel="stylesheet" href="stylesearchbar.css">
+    <link rel="stylesheet" href="stylefilterbar.css">
+    <link rel="stylesheet" href="stylegridfindclasses.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="site-title"><h1>Get your Gym Guide</h1></div>
+    <nav class="nav-links">
+        <ul>
+            <a href="index.html">Home</a>
+            <a href="findclasses.html">Find Classes</a>
+            <a href="findgyms.html" class="active">Find Gyms</a>
+            <a href="forum.html">Forum</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+            <a href="faq.html">FAQ</a>
+            <a href="signup.html" class="signup-button">Sign Up</a>
+            <a href="listyourgym.html" class="signup-button">List your gym</a>
+        </ul>
+    </nav>
+</header>
+
+<!-- Search -->
+<div class="search-section-background">
+    <form>
+        <div class="search-bar">
+            <input class="search-input" type="search" placeholder="Search gyms, studios, or brands...">
+        </div>
+    </form>
+</div>
+
+<!-- Filters -->
+<div class="filter-bar">
+
+    <div class="filter-group">
+        <label>Gym Type</label>
+        <select id="type-select">
+            <option value="all">All</option>
+            <option value="gym">Gym</option>
+            <option value="studio">Studio</option>
+            <option value="crossfit">CrossFit</option>
+            <option value="yoga">Yoga / Pilates</option>
+        </select>
+    </div>
+
+    <div class="filter-group">
+        <label>Location</label>
+        <select id="location-select">
+            <option value="all">All Cities</option>
+            <option value="berlin">Berlin</option>
+            <option value="hamburg">Hamburg</option>
+            <option value="munich">Munich</option>
+            <option value="frankfurt">Frankfurt</option>
+            <option value="heidelberg">Heidelberg</option>
+            <option value="cologne">Cologne</option>
+            <option value="stuttgart">Stuttgart</option>
+            <option value="dusseldorf">Düsseldorf</option>
+            <option value="leipzig">Leipzig</option>
+            <option value="bremen">Bremen</option>
+        </select>
+    </div>
+
+    <div class="filter-group">
+        <label>Price</label>
+        <select id="price-select">
+            <option value="any">Any</option>
+            <option value="low">€0–25</option>
+            <option value="medium">€25–50</option>
+            <option value="high">€50+</option>
+        </select>
+    </div>
+
+    <div class="filter-group">
+        <label>Amenities</label>
+        <select id="amenities-select">
+            <option value="any">Any</option>
+            <option value="sauna">Sauna</option>
+            <option value="pool">Pool</option>
+            <option value="parking">Parking</option>
+            <option value="women">Women-only</option>
+        </select>
+    </div>
+
+</div>
+
+<!-- Grid -->
+<div class="grid2-container">
+
+    <div class="box" data-type="gym" data-location="berlin" data-price-tier="medium" data-amenities="sauna,parking">
+        <img src="photos/gym1.jpg" class="box-img" alt="Fitness First Berlin">
+        <div class="box-content">
+            <h3>Fitness First</h3>
+            <p>Modern gym with premium equipment and sauna.</p>
+            <p><strong>📍 Berlin</strong></p>
+            <p class="price">From €39 / month</p>
+            <a href="signup.html" class="book-btn">VIEW GYM</a>
+        </div>
+    </div>
+
+    <div class="box" data-type="yoga" data-location="munich" data-price-tier="low" data-amenities="women">
+        <img src="photos/yogastudio.jpg" class="box-img" alt="Yoga Studio Munich">
+        <div class="box-content">
+            <h3>Flow Yoga Studio</h3>
+            <p>Peaceful yoga and pilates studio.</p>
+            <p><strong>📍 Munich</strong></p>
+            <p class="price">From €25 / month</p>
+            <a href="signup.html" class="book-btn">VIEW STUDIO</a>
+        </div>
+    </div>
+
+    <div class="box" data-type="crossfit" data-location="hamburg" data-price-tier="medium" data-amenities="parking">
+        <img src="photos/crossfit.jpg" class="box-img" alt="CrossFit Hamburg">
+        <div class="box-content">
+            <h3>CrossFit Hafen</h3>
+            <p>High-intensity CrossFit training.</p>
+            <p><strong>📍 Hamburg</strong></p>
+            <p class="price">From €85 / month</p>
+            <a href="signup.html" class="book-btn">VIEW GYM</a>
+        </div>
+    </div>
+
+    <div class="box" data-type="gym" data-location="cologne" data-price-tier="medium" data-amenities="sauna">
+        <img src="photos/gym3.jpg" class="box-img" alt="John Reed Cologne">
+        <div class="box-content">
+            <h3>John Reed Fitness</h3>
+            <p>Music-driven fitness experience.</p>
+            <p><strong>📍 Cologne</strong></p>
+            <p class="price">From €44.90 / month</p>
+            <a href="signup.html" class="book-btn">VIEW GYM</a>
+        </div>
+    </div>
+
+    <div class="box" data-type="gym" data-location="dusseldorf" data-price-tier="high" data-amenities="pool,sauna">
+        <img src="photos/gym8.jpg" class="box-img" alt="Holmes Place Düsseldorf">
+        <div class="box-content">
+            <h3>Holmes Place</h3>
+            <p>Luxury gym with spa and pool.</p>
+            <p><strong>📍 Düsseldorf</strong></p>
+            <p class="price">From €99 / month</p>
+            <a href="signup.html" class="book-btn">VIEW GYM</a>
+        </div>
+    </div>
+
+        <!-- FitX Essen -->
+    <div class="box"
+        data-type="gym"
+        data-location="essen"
+        data-price-tier="medium"
+        data-amenities="parking">
+        <img src="photos/gym4.jpg" alt="FitX Essen" class="box-img">
+        <div class="box-content">
+            <h3>FitX</h3>
+            <p>Spacious gym with free courses, functional training, and friendly atmosphere.</p>
+            <p><strong>📍 Essen</strong></p>
+            <p class="price">From €29 / month</p>
+            <a href="signup.html" class="book-btn">VIEW GYM</a>
+        </div>
+    </div>
+
+    <!-- Urban Sports Munich -->
+    <div class="box"
+        data-type="studio"
+        data-location="munich"
+        data-price-tier="high"
+        data-amenities="parking">
+        <img src="photos/gym5.jpg" alt="Urban Sports Munich" class="box-img">
+        <div class="box-content">
+            <h3>Urban Sports Partner Gym</h3>
+            <p>Flexible access to gyms and studios with one membership.</p>
+            <p><strong>📍 Munich</strong></p>
+            <p class="price">From €59 / month</p>
+            <a href="signup.html" class="book-btn">VIEW STUDIO</a>
+        </div>
+    </div>
+
+    <!-- CrossFit Frankfurt -->
+    <div class="box"
+        data-type="crossfit"
+        data-location="frankfurt"
+        data-price-tier="high"
+        data-amenities="parking">
+        <img src="photos/gym6.jpg" alt="CrossFit Frankfurt" class="box-img">
+        <div class="box-content">
+            <h3>CrossFit Mainhattan</h3>
+            <p>Certified CrossFit box with expert coaching and strong community.</p>
+            <p><strong>📍 Frankfurt am Main</strong></p>
+            <p class="price">From €95 / month</p>
+            <a href="signup.html" class="book-btn">VIEW GYM</a>
+        </div>
+    </div>
+
+    <!-- LadyFit Stuttgart -->
+    <div class="box"
+        data-type="studio"
+        data-location="stuttgart"
+        data-price-tier="medium"
+        data-amenities="women">
+        <img src="photos/gym7.jpg" alt="Women Gym Stuttgart" class="box-img">
+        <div class="box-content">
+            <h3>LadyFit Studio</h3>
+            <p>Women-only fitness studio with personal coaching.</p>
+            <p><strong>📍 Stuttgart</strong></p>
+            <p class="price">From €45 / month</p>
+            <a href="signup.html" class="book-btn">VIEW STUDIO</a>
+        </div>
+    </div>
+
+    <!-- Holmes Place Düsseldorf -->
+    <div class="box"
+        data-type="gym"
+        data-location="dusseldorf"
+        data-price-tier="high"
+        data-amenities="pool,sauna">
+        <img src="photos/gym8.jpg" alt="Holmes Place Düsseldorf" class="box-img">
+        <div class="box-content">
+            <h3>Holmes Place</h3>
+            <p>Luxury health club with spa, pool, and sauna.</p>
+            <p><strong>📍 Düsseldorf</strong></p>
+            <p class="price">From €99 / month</p>
+            <a href="signup.html" class="book-btn">VIEW GYM</a>
+        </div>
+    </div>
+
+    <!-- Functional Zone Leipzig -->
+    <div class="box"
+        data-type="gym"
+        data-location="leipzig"
+        data-price-tier="medium"
+        data-amenities="parking">
+        <img src="photos/gym9.jpg" alt="Functional Training Leipzig" class="box-img">
+        <div class="box-content">
+            <h3>Functional Zone</h3>
+            <p>Functional training focused on strength, mobility, and endurance.</p>
+            <p><strong>📍 Leipzig</strong></p>
+            <p class="price">From €49 / month</p>
+            <a href="signup.html" class="book-btn">VIEW GYM</a>
+        </div>
+    </div>
+
+    <!-- Anytime Fitness Bremen -->
+    <div class="box"
+        data-type="gym"
+        data-location="bremen"
+        data-price-tier="medium"
+        data-amenities="parking">
+        <img src="photos/gym10.jpg" alt="Anytime Fitness Bremen" class="box-img">
+        <div class="box-content">
+            <h3>Anytime Fitness</h3>
+            <p>24/7 gym access with international membership.</p>
+            <p><strong>📍 Bremen</strong></p>
+            <p class="price">From €39 / month</p>
+            <a href="signup.html" class="book-btn">VIEW GYM</a>
+        </div>
+    </div>
+
+    <!-- UniSport Heidelberg -->
+    <div class="box"
+        data-type="gym"
+        data-location="heidelberg"
+        data-price-tier="low"
+        data-amenities="parking">
+        <img src="photos/gym11.jpg" alt="UniSport Heidelberg" class="box-img">
+        <div class="box-content">
+            <h3>UniSport Heidelberg</h3>
+            <p>Student-friendly gym with affordable memberships.</p>
+            <p><strong>📍 Heidelberg</strong></p>
+            <p class="price">From €20 / month</p>
+            <a href="signup.html" class="book-btn">VIEW GYM</a>
+        </div>
+    </div>
+
+</div>
+
+<footer class="site-footer">
+    <p>&copy; 2025 Get Your Gym Guide. All rights reserved.</p>
+</footer>
+
+<script src="jsfiles/dynamicfilter-gym.js" defer></script>
+
+</body>
+</html>
